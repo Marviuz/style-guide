@@ -1,0 +1,19 @@
+{
+  "name": "@marviuz/prettier-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./index.mjs",
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.5.10"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
