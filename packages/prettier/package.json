@@ -13,6 +13,7 @@
   "devDependencies": {
     "@marviuz/eslint-config": "workspace:*",
     "eslint": "^9.22.0",
+    "eslint-config-turbo": "^2.4.4",
     "prettier": "^3.5.3"
   },
   "peerDependencies": {

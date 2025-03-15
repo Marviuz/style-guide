@@ -1,8 +1,10 @@
 import globals from 'globals';
+import turboConfig from 'eslint-config-turbo/flat';
 import marviuzConfig from './index.js';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  ...turboConfig,
   ...marviuzConfig.recommended,
   {
     languageOptions: {
