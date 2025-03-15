@@ -1,6 +1,7 @@
 {
   "name": "@marviuz/typescript",
   "version": "0.0.0",
+  "license": "MIT",
   "exports": "./tsconfig.json",
   "publishConfig": {
     "access": "public"

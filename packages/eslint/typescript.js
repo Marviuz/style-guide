@@ -1,11 +1,11 @@
-import tseslint from 'typescript-eslint/dist/index.js';
+import tseslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import prettierConfig from 'eslint-config-prettier';
-import tsdoc from './tsdoc';
+import tsdoc from './tsdoc.js';
 import { consts } from './consts.js';
-import typescript from './rules/typescript';
-import typescriptExtension from './rules/typescript/extension';
-import typescriptImport from './rules/typescript/import';
+import typescript from './rules/typescript/index.js';
+import typescriptExtension from './rules/typescript/extension.js';
+import typescriptImport from './rules/typescript/import.js';
 
 export default tseslint.config(
   ...tseslint.configs.strictTypeChecked,

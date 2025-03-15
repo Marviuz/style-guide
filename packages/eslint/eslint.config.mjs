@@ -1,9 +1,9 @@
 import globals from 'globals';
-import { recommended } from './index.js';
+import marviuzConfig from './index.js';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...recommended,
+  ...marviuzConfig.recommended,
   {
     languageOptions: {
       globals: globals.node,

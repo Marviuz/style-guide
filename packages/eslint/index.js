@@ -1,7 +1,5 @@
 import { base } from './_base.js';
+import typescript from './typescript.js';
 
-export const recommended = base;
-export const typescript = base;
-
-const config = { recommended, typescript };
+const config = { recommended: base, typescript };
 export default config;

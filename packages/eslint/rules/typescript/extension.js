@@ -1,4 +1,4 @@
-import rules from '../variables';
+import rules from '../variables.js';
 
 // These share identical configuration options, so we want to keep them in sync.
 const noUnusedVarsConfig = rules['no-unused-vars'];

@@ -26,6 +26,7 @@ export const base = [
     },
     settings: {
       'import/resolver': {
+        typescript: true,
         node: true,
       },
     },

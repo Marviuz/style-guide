@@ -1,7 +1,7 @@
-import { recommended } from '@marviuz/eslint-config';
+import marviuzConfig from '@marviuz/eslint-config';
 
 export default [
-  ...recommended,
+  ...marviuzConfig.recommended,
   {
     files: ['**/*.mjs', '**/*.cjs', '**/*.js'],
     rules: {
