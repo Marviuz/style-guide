@@ -37,10 +37,10 @@ export const base = [
       reportUnusedDisableDirectives: 'warn',
     },
     languageOptions: {
-      ecmaVersion: consts.ECMA_VERSION,
-      sourceType: 'module',
       parser: babelParser,
       parserOptions: {
+        ecmaVersion: consts.ECMA_VERSION,
+        sourceType: 'module',
         requireConfigFile: false,
       },
     },

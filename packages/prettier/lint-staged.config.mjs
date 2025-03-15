@@ -1,3 +1,7 @@
+function lint(files) {
+  return `eslint --fix ${files.join(' ')}`;
+}
+
 export default {
-  '**/*.mjs': ['prettier --write'],
+  '**/*.(c|m)?js': ['prettier --write', lint],
 };
