@@ -1,11 +1,18 @@
 # Dependency directories
 node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # Editor folders
 .idea/
 .vscode/
 
-# Logs
+# Logs & Debugging
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -13,11 +20,66 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
-# Operating system files
-.DS_Store
+# Testing
+/coverage
 
-# Keys
-.env
+# Next.js
+
+# Production
+/build
 
 # Cache files
 .turbo
+
+# Miscellaneous
+.DS_Store
+*.pem
+
+# Environment variables
+.env*
+  
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Build Outputs
+.next/
+out/
+build
+dist
+next-env.d.ts
+
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.DS_Store
+*.pem

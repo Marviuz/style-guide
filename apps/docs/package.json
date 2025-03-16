@@ -1,0 +1,29 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --turbopack",
+    "lint": "next lint --max-warnings=0",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.2.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@marviuz/eslint-config": "workspace:*",
+    "@marviuz/typescript": "workspace:*",
+    "@next/eslint-plugin-next": "^15.2.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-turbo": "^2.4.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
