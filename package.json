@@ -10,7 +10,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "pkg:fix": "pnpx @manypkg/cli fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
