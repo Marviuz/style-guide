@@ -67,6 +67,9 @@ coverage
 # Vercel
 .vercel
 
+# Content Collections
+.content-collections
+
 # Build Outputs
 .next/
 out/
