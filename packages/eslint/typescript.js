@@ -14,6 +14,11 @@ export default tseslint.config(
   prettierConfig,
   tsdoc,
   {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
     files: consts.TYPESCRIPT_FILES,
     rules: {
       ...typescript,

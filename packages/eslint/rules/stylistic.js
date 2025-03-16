@@ -1,7 +1,13 @@
 export default {
   camelcase: [
     'error',
-    { allow: ['^UNSAFE_'], ignoreDestructuring: false, properties: 'never' },
+    {
+      allow: ['^UNSAFE_'],
+      ignoreDestructuring: true,
+      ignoreGlobals: true,
+      ignoreImports: true,
+      properties: 'never',
+    },
   ],
   'func-names': ['error', 'as-needed'],
   'new-cap': ['error', { capIsNew: false }],

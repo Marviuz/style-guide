@@ -1,4 +1,5 @@
-import next from '@next/eslint-plugin-next';
+import nextPlugin from '@next/eslint-plugin-next';
+import next from './rules/next.js';
 import { consts } from './consts.js';
 
 const babelOptions = {
@@ -16,10 +17,11 @@ const babelOptions = {
 export default [
   {
     plugins: {
-      '@next/next': next,
+      '@next/next': nextPlugin,
     },
     rules: {
-      ...next.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...next,
     },
     languageOptions: {
       parserOptions: {
