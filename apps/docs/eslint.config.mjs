@@ -3,7 +3,7 @@ import marviuzConfig from '@marviuz/eslint-config';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { ignores: ['dist', '**/*.config.mjs'] },
+  { ignores: ['dist', '**/*.config.mjs', '.content-collections'] },
   ...marviuzConfig.recommended,
   ...marviuzConfig.typescript,
   ...marviuzConfig.react,
