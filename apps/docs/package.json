@@ -1,29 +1,31 @@
 {
-  "name": "docs",
+  "name": "@marviuz/docs",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev --turbopack",
-    "lint": "next lint --max-warnings=0",
-    "start": "next start"
+    "build": "tsc -b && vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
     "@marviuz/eslint-config": "workspace:*",
     "@marviuz/typescript": "workspace:*",
-    "@next/eslint-plugin-next": "^15.2.2",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-turbo": "^2.4.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
   }
 }
