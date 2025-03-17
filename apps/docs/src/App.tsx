@@ -1,13 +1,13 @@
-import { allPosts } from 'content-collections';
+import { allContents } from 'content-collections';
 
 export function App() {
   return (
     <ul>
-      {allPosts.map((post) => (
-        <li key={post._meta.path}>
-          <a href={`/posts/${post._meta.path}`}>
-            <h3>{post.title}</h3>
-            <p>{post.summary}</p>
+      {allContents.map((content) => (
+        <li key={content._meta.path}>
+          <a href={`/posts/${content._meta.path}`}>
+            <h3>{content.title}</h3>
+            <p>{content.summary}</p>
           </a>
         </li>
       ))}

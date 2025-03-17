@@ -1,9 +1,9 @@
 import { defineCollection, defineConfig } from '@content-collections/core';
 
-const posts = defineCollection({
-  name: 'posts',
+const content = defineCollection({
+  name: 'content',
   directory: 'src/content',
-  include: '**/*.md',
+  include: ['**/*.md', '**/*.mdx', '**/*'],
   schema: (z) => ({
     title: z.string(),
     summary: z.string(),
@@ -12,5 +12,5 @@ const posts = defineCollection({
 
 // eslint-disable-next-line import/no-default-export -- config
 export default defineConfig({
-  collections: [posts],
+  collections: [content],
 });
