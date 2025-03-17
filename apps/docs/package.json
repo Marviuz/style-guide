@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.482.0",
+    "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
@@ -29,6 +30,7 @@
     "@content-collections/core": "^0.8.2",
     "@content-collections/vite": "^0.2.4",
     "@marviuz/eslint-config": "workspace:*",
+    "@marviuz/prettier-config": "workspace:*",
     "@marviuz/typescript": "workspace:*",
     "@tanstack/eslint-plugin-router": "^1.114.12",
     "@tanstack/react-router-devtools": "^1.114.23",
@@ -39,6 +41,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "^5.8.2",
     "vite": "^6.2.0"
   }

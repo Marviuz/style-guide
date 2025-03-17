@@ -4,7 +4,7 @@ import { Button } from './common/button';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/50 backdrop-blur-sm">
+    <header className="bg-background/50 sticky top-0 z-50 border-b backdrop-blur-sm">
       <div className="container mx-auto w-full px-4">
         <div className="flex h-14 items-center justify-between">
           <Link className="font-kode-mono text-4xl font-black" to="/">

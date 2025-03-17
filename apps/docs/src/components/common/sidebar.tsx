@@ -32,7 +32,7 @@ export function SidebarList({
 export function SidebarListItem({ className, ...props }: ComponentProps<'li'>) {
   return (
     <li
-      className={cn('w-fit text-muted-foreground hover:underline', className)}
+      className={cn('text-muted-foreground w-fit hover:underline', className)}
       {...props}
     />
   );

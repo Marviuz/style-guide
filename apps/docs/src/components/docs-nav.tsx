@@ -19,7 +19,7 @@ export function DocsNav() {
             {allContents.map((content) => (
               <SidebarListItem key={content.title}>
                 <Link
-                  className="text-muted-foreground transition hover:underline data-[active=true]:font-medium data-[active=true]:text-foreground"
+                  className="text-muted-foreground data-[active=true]:text-foreground transition hover:underline data-[active=true]:font-medium"
                   to={content._meta.path}
                 >
                   {content.title} - {content._meta.path}
