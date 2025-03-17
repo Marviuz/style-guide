@@ -8,6 +8,10 @@ const content = defineCollection({
     title: z.string(),
     summary: z.string(),
   }),
+  transform: (doc) => ({
+    ...doc,
+    slug: doc.title.toLowerCase().replace(/ /g, '-'),
+  }),
 });
 
 // eslint-disable-next-line import/no-default-export -- config
