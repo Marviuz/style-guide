@@ -1,12 +1,28 @@
 import reactRefresh from 'eslint-plugin-react-refresh';
 import marviuzConfig from '@marviuz/eslint-config';
+import pluginRouter from '@tanstack/eslint-plugin-router';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { ignores: ['dist', '**/*.config.mjs', '.content-collections'] },
+  {
+    ignores: [
+      'dist',
+      '**/*.config.mjs',
+      '.content-collections',
+      '**/routeTree.gen.ts',
+    ],
+  },
   ...marviuzConfig.recommended,
   ...marviuzConfig.typescript,
   ...marviuzConfig.react,
+  {
+    plugins: {
+      '@tanstack/router': pluginRouter,
+    },
+    rules: {
+      '@tanstack/router/create-route-property-order': 'error',
+    },
+  },
   {
     languageOptions: {
       parserOptions: {

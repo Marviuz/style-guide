@@ -1,6 +1,11 @@
+import { createFileRoute } from '@tanstack/react-router';
 import { allContents } from 'content-collections';
 
-export function App() {
+export const Route = createFileRoute('/')({
+  component: RouteComponent,
+});
+
+function RouteComponent() {
   return (
     <ul>
       {allContents.map((content) => (
