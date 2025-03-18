@@ -4,6 +4,8 @@ import rehypeShiki, { type RehypeShikiOptions } from '@shikijs/rehype';
 import { remarkInstall } from 'fumadocs-docgen';
 import remarkCodeTitles from 'remark-flexible-code-titles';
 import { transformerNotationHighlight } from '@shikijs/transformers';
+import rehypeAutolinkHeadings, { type Options } from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
 
 const content = defineCollection({
   name: 'content',
@@ -30,6 +32,8 @@ const content = defineCollection({
         ],
       ],
       rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: 'wrap' } satisfies Options],
         [
           rehypeShiki,
           {
