@@ -1,6 +1,6 @@
 import { defineCollection, defineConfig } from '@content-collections/core';
 import { compileMDX } from '@content-collections/mdx';
-import rehypeShiki from '@shikijs/rehype';
+import rehypeShiki, { type RehypeShikiOptions } from '@shikijs/rehype';
 import { remarkInstall } from 'fumadocs-docgen';
 import remarkCodeTitles from 'remark-flexible-code-titles';
 import { transformerNotationHighlight } from '@shikijs/transformers';
@@ -34,13 +34,13 @@ const content = defineCollection({
           rehypeShiki,
           {
             theme: 'poimandres',
-            langs: ['ts', 'js', 'sh'],
+            langs: ['ts', 'js', 'json', 'jsonc', 'sh'],
             transformers: [
               transformerNotationHighlight({
                 matchAlgorithm: 'v3',
               }),
             ],
-          },
+          } satisfies RehypeShikiOptions,
         ],
       ],
     });
