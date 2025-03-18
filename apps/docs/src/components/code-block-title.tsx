@@ -7,7 +7,10 @@ export function CodeBlockTitleContainer({
 }: ComponentProps<'div'>) {
   return (
     <div
-      className={cn('[&>pre]:mt-0 [&>pre]:rounded-t-none', className)}
+      className={cn(
+        '[&:has(div:first-of-type)>pre]:rounded-t-none [&>pre]:mt-0',
+        className,
+      )}
       {...props}
     />
   );

@@ -10,10 +10,10 @@ export function PackageInstallerTabs({
   children,
 }: ComponentProps<typeof FumaTabs>) {
   return (
-    <Tabs defaultValue={items?.at(0)}>
-      <TabsList>
+    <Tabs className="gap-0" defaultValue={items?.at(0)}>
+      <TabsList className="w-full justify-start rounded-b-none">
         {items?.map((item) => (
-          <TabsTrigger key={item} value={item}>
+          <TabsTrigger className="grow-0" key={item} value={item}>
             {item}
           </TabsTrigger>
         ))}
@@ -27,5 +27,9 @@ export function PackageInstallerTab({
   value,
   children,
 }: ComponentProps<typeof FumaTab>) {
-  return value ? <TabsContent value={value}>{children}</TabsContent> : null;
+  return value ? (
+    <TabsContent className="[&_pre]:rounded-t-none" value={value}>
+      {children}
+    </TabsContent>
+  ) : null;
 }
