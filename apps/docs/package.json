@@ -11,11 +11,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@content-collections/mdx": "^0.2.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/vite": "^4.0.14",
     "@tanstack/react-router": "^1.114.23",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fumadocs-docgen": "^2.0.0",
     "lucide-react": "^0.482.0",
     "prettier": "^3.5.3",
     "react": "^19.0.0",
@@ -32,6 +34,7 @@
     "@marviuz/eslint-config": "workspace:*",
     "@marviuz/prettier-config": "workspace:*",
     "@marviuz/typescript": "workspace:*",
+    "@tailwindcss/typography": "^0.5.16",
     "@tanstack/eslint-plugin-router": "^1.114.12",
     "@tanstack/react-router-devtools": "^1.114.23",
     "@tanstack/router-plugin": "^1.114.23",

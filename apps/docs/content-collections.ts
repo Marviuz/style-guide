@@ -1,4 +1,5 @@
 import { defineCollection, defineConfig } from '@content-collections/core';
+import { compileMDX } from '@content-collections/mdx';
 
 const content = defineCollection({
   name: 'content',
@@ -8,10 +9,14 @@ const content = defineCollection({
     title: z.string(),
     summary: z.string(),
   }),
-  transform: (doc) => ({
-    ...doc,
-    slug: doc.title.toLowerCase().replace(/ /g, '-'),
-  }),
+  transform: async (doc, ctx) => {
+    const mdx = await compileMDX(ctx, doc);
+    return {
+      ...doc,
+      slug: doc.title.toLowerCase().replace(/ /g, '-'),
+      mdx,
+    };
+  },
 });
 
 // eslint-disable-next-line import/no-default-export -- config
