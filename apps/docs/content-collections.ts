@@ -6,16 +6,60 @@ import remarkCodeTitles from 'remark-flexible-code-titles';
 import { transformerNotationHighlight } from '@shikijs/transformers';
 import rehypeAutolinkHeadings, { type Options } from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
+import type * as unist from 'unist';
+import { type VFile } from 'vfile';
+import GithubSlugger from 'github-slugger';
+import { visit } from 'unist-util-visit';
+import { nanoid } from 'nanoid';
+import { remark } from 'remark';
+import { toString } from 'mdast-util-to-string';
+import { type Heading } from 'mdast';
+
+type Toc = {
+  _id: string;
+  value: string;
+  url: string;
+  depth: number;
+};
+
+declare module 'vfile' {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions -- module augmentation
+  interface DataMap {
+    toc: Toc[];
+  }
+}
+
+function remarkTocHeadings() {
+  return (tree: unist.Parent, file: VFile) => {
+    const slugger = new GithubSlugger();
+    const toc: Toc[] = [];
+
+    visit(tree, 'heading', (node: Heading) => {
+      const textContent = toString(node);
+      toc.push({
+        _id: nanoid(),
+        value: textContent,
+        url: `#${slugger.slug(textContent)}`,
+        depth: node.depth,
+      });
+    });
+
+    file.data.toc = toc;
+  };
+}
+
+async function extractTocHeadings(markdown: string) {
+  const vfile = await remark().use(remarkTocHeadings).process(markdown);
+  return vfile.data.toc;
+}
 
 const content = defineCollection({
   name: 'content',
   directory: 'src/content',
   include: '**/*.mdx',
-  schema: (z) => ({
-    title: z.string(),
-    summary: z.string(),
-  }),
+  schema: (z) => ({ title: z.string(), summary: z.string() }),
   transform: async (doc, ctx) => {
+    const slugger = new GithubSlugger();
     const mdx = await compileMDX(ctx, doc, {
       remarkPlugins: [
         remarkInstall,
@@ -49,9 +93,12 @@ const content = defineCollection({
       ],
     });
 
+    const toc = await extractTocHeadings(doc.content);
+
     return {
       ...doc,
-      slug: doc.title.toLowerCase().replace(/ /g, '-'),
+      slug: slugger.slug(doc.title),
+      toc,
       mdx,
     };
   },
