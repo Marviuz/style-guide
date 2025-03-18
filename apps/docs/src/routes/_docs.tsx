@@ -15,7 +15,7 @@ function RouteComponent() {
       <Header />
       <div className="flex justify-center">
         <DocsNav />
-        <main className="w-full max-w-prose py-16">
+        <main className="w-full max-w-prose shrink-0 py-16">
           <article className="prose mx-auto divide-y px-4">
             <div>
               <Outlet />

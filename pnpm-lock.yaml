@@ -41,6 +41,15 @@ importers:
       '@content-collections/mdx':
         specifier: ^0.2.2
         version: 0.2.2(@content-collections/core@0.8.2(typescript@5.8.2))(acorn@8.14.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@fontsource-variable/geist':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/geist-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource-variable/kode-mono':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.11)(react@19.0.0)
@@ -762,6 +771,15 @@ packages:
 
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
+
+  '@fontsource-variable/geist-mono@5.2.5':
+    resolution: {integrity: sha512-zyuyDtO00SbmqU4Bo5XWzX2hE5RUxL+h2bv3P8SrmxqfqW66FU/xw5DW3xRQPqQgyEpb/Fh5FEFCpOna78dvCA==}
+
+  '@fontsource-variable/geist@5.2.5':
+    resolution: {integrity: sha512-773ht1maARKCDSxxmyc6cWiSRudk4GU+pW/0PHHnTEISprej9ARfGZVVhW04nmrk1Nlj888MLyuutTx1UnYy0g==}
+
+  '@fontsource-variable/kode-mono@5.2.5':
+    resolution: {integrity: sha512-gO4hWWwU/xkjyFqAmfmyJwjkOclsMRz4JWBIbcRaL5/qx6NDluzR7bx7RI5WZSlkBNt5J7CXI5gUcyfqapXCUg==}
 
   '@formatjs/intl-localematcher@0.6.0':
     resolution: {integrity: sha512-4rB4g+3hESy1bHSBG3tDFaMY2CH67iT7yne1e+0CLTsGLDcmoEWWpJjjpWVaYgYfYuohIRuo0E+N536gd2ZHZA==}
@@ -5595,6 +5613,12 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   '@floating-ui/utils@0.2.9': {}
+
+  '@fontsource-variable/geist-mono@5.2.5': {}
+
+  '@fontsource-variable/geist@5.2.5': {}
+
+  '@fontsource-variable/kode-mono@5.2.5': {}
 
   '@formatjs/intl-localematcher@0.6.0':
     dependencies:
