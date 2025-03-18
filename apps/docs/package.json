@@ -37,6 +37,7 @@
     "@marviuz/prettier-config": "workspace:*",
     "@marviuz/typescript": "workspace:*",
     "@shikijs/rehype": "^3.2.1",
+    "@shikijs/transformers": "^3.2.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/eslint-plugin-router": "^1.114.12",
     "@tanstack/react-router-devtools": "^1.114.23",

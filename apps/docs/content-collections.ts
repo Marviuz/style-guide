@@ -3,6 +3,7 @@ import { compileMDX } from '@content-collections/mdx';
 import rehypeShiki from '@shikijs/rehype';
 import { remarkInstall } from 'fumadocs-docgen';
 import remarkCodeTitles from 'remark-flexible-code-titles';
+import { transformerNotationHighlight } from '@shikijs/transformers';
 
 const content = defineCollection({
   name: 'content',
@@ -34,6 +35,11 @@ const content = defineCollection({
           {
             theme: 'poimandres',
             langs: ['ts', 'js', 'sh'],
+            transformers: [
+              transformerNotationHighlight({
+                matchAlgorithm: 'v3',
+              }),
+            ],
           },
         ],
       ],

@@ -58,6 +58,13 @@
   --tw-prose-pre-bg: var(--card);
   --tw-prose-th-borders: var(--border);
   --tw-prose-td-borders: var(--border);
+
+  & .shiki .line {
+    @apply inline-block w-full;
+    &.highlighted {
+      @apply bg-white/10;
+    }
+  }
 }
 
 @theme inline {

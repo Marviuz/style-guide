@@ -5,10 +5,72 @@ summary: ESLint configuration
 
 # @marviuz/eslint-config
 
+## Installation
+
 ```package-install
 npm i -D @marviuz/eslint-config
 ```
 
+## Usage
+
 ```js:eslint.config.mjs
-console.log('HELLO');
+import marviuzConfig from '@marviuz/eslint-config';
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  // Config I generally use
+  ...marviuzConfig.recommended,
+
+  // Configs for typescript
+  ...marviuzConfig.typescript,
+
+  // Configs for react
+  ...marviuzConfig.react,
+
+  // Configs for next.js
+  ...marviuzConfig.next,
+];
+```
+
+_Note: this config uses [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) and you cannot redeclare a plugin._
+
+## Usage with [lint-staged](https://github.com/okonet/lint-staged)
+
+I'm not sure why but a specific config needs to be manually added to be able to use with lint-staged.
+
+```js:lint-staged.config.mjs
+import path from 'node:path';
+
+/**
+ * See next.js example for lint-staged
+ * https://nextjs.org/docs/app/api-reference/config/eslint#running-lint-on-staged-files
+ */
+const lint = (filenames) =>
+  `eslint --no-warn-ignored --fix --max-warnings=0 ${filenames
+    .map((f) => path.relative(import.meta.dirname, f))
+    .join(' ')}`;
+
+export default {
+  '*.{cjs,mjs,js,jsx,ts,tsx}': [lint],
+};
+```
+
+```js:eslint.config.mjs
+import marviuzConfig from '@marviuz/eslint-config';
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  ...marviuzConfig.recommended,
+  ...marviuzConfig.typescript,
+  ...marviuzConfig.react,
+  ...marviuzConfig.next,
+// [!code highlight:7]
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  },
+];
 ```

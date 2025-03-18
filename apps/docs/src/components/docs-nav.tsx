@@ -22,7 +22,7 @@ export function DocsNav() {
                   className="text-muted-foreground data-[active=true]:text-foreground transition hover:underline data-[active=true]:font-medium"
                   to={content._meta.path}
                 >
-                  {content.title} - {content._meta.path}
+                  {content.title}
                 </Link>
               </SidebarListItem>
             ))}
