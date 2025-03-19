@@ -1,4 +1,4 @@
-import { type DataMap } from 'vfile';
+import type { DataMap } from 'vfile';
 import { allContents } from 'content-collections';
 import { cn } from '@/utils/cn';
 import {
@@ -30,20 +30,73 @@ export function TocNav({ slug }: TocNavProps) {
   );
 }
 
-function TocList({ toc, indent }: { toc: DataMap['toc']; indent?: boolean }) {
-  const [firstToc, ...rest] = toc;
-  return firstToc ? (
-    <SidebarList className={cn(indent && 'pl-4')} variant="compact">
-      <SidebarListItem key={firstToc._id}>
-        <a href={firstToc.url}>{firstToc.value}</a>
-      </SidebarListItem>
-      {indent ? (
-        <TocList
-          toc={rest}
-          // FIXME: indent logic
-          // indent={}
-        />
-      ) : null}
+function TocList({
+  toc,
+  baseDepth,
+}: {
+  toc?: DataMap['toc'];
+  baseDepth?: number;
+}) {
+  if (!toc || toc.length === 0) return null;
+
+  const currentBaseDepth = baseDepth ?? toc[0]?.depth ?? 0;
+
+  const currentLevelItems: DataMap['toc'] = [];
+  let nextIndex = 0;
+
+  while (nextIndex < toc.length && toc[nextIndex]?.depth === currentBaseDepth) {
+    const nextToc = toc[nextIndex];
+    if (nextToc) {
+      currentLevelItems.push(nextToc);
+    }
+    nextIndex++;
+  }
+
+  return (
+    <SidebarList
+      className={cn(currentBaseDepth > 1 ? 'pl-4' : '')}
+      variant="compact"
+    >
+      {currentLevelItems.map((item, index) => {
+        const childrenStartIndex = nextIndex;
+
+        const hasChildren =
+          childrenStartIndex < toc.length &&
+          (toc[childrenStartIndex]?.depth ?? 0) > currentBaseDepth;
+
+        let childrenEndIndex = childrenStartIndex;
+
+        if (hasChildren) {
+          while (
+            childrenEndIndex < toc.length &&
+            (toc[childrenEndIndex]?.depth ?? 0) > currentBaseDepth
+          ) {
+            childrenEndIndex++;
+          }
+        }
+
+        const childrenItems = hasChildren
+          ? toc.slice(childrenStartIndex, childrenEndIndex)
+          : [];
+
+        if (hasChildren && index === currentLevelItems.length - 1) {
+          nextIndex = childrenEndIndex;
+        }
+
+        return (
+          <>
+            <SidebarListItem key={item._id}>
+              <a href={item.url}>{item.value}</a>
+            </SidebarListItem>
+            {childrenItems.length > 0 && (
+              <TocList
+                toc={childrenItems}
+                baseDepth={childrenItems[0]?.depth}
+              />
+            )}
+          </>
+        );
+      })}
     </SidebarList>
-  ) : null;
+  );
 }
