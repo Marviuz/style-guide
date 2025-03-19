@@ -1,4 +1,5 @@
 import type { DataMap } from 'vfile';
+import { Fragment } from 'react';
 import { allContents } from 'content-collections';
 import { cn } from '@/utils/cn';
 import {
@@ -84,8 +85,8 @@ function TocList({
         }
 
         return (
-          <>
-            <SidebarListItem key={item._id}>
+          <Fragment key={item._id}>
+            <SidebarListItem>
               <a href={item.url}>{item.value}</a>
             </SidebarListItem>
             {childrenItems.length > 0 && (
@@ -94,7 +95,7 @@ function TocList({
                 baseDepth={childrenItems[0]?.depth}
               />
             )}
-          </>
+          </Fragment>
         );
       })}
     </SidebarList>

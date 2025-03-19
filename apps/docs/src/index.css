@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 @import '@fontsource-variable/geist';
 @import '@fontsource-variable/geist-mono';
 @import '@fontsource-variable/kode-mono';
@@ -41,7 +42,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
-  
+
   --default-mono-font-family: 'Geist Mono Variable', monospace;
 }
 
@@ -64,19 +65,46 @@
   --tw-prose-th-borders: var(--border);
   --tw-prose-td-borders: var(--border);
 
-  & h1,
+  h1 a {
+    @apply text-4xl font-extrabold tracking-tight;
+  }
+
+  h2 a {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  h3 a {
+    @apply text-2xl font-bold tracking-tight;
+  }
+
+  h4 a {
+    @apply text-xl font-semibold tracking-tight;
+  }
+
+  h5 a {
+    @apply text-lg font-semibold tracking-tight;
+  }
+
+  h6 a {
+    @apply text-base font-medium tracking-tight;
+  }
+
+  h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply scroll-mt-24;
+    @apply scroll-mt-24 pb-2;
+    & > a {
+      @apply no-underline underline-offset-4 transition;
+    }
   }
 
   & .shiki .line {
     @apply inline-block w-full;
     &.highlighted {
-      @apply bg-white/10;
+      @apply bg-white/5;
     }
   }
 }
@@ -118,11 +146,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  
   --font-geist: 'Geist Variable', sans-serif;
   --font-geist-mono: 'Geist Mono Variable', monospace;
   --font-kode-mono: 'Kode Mono Variable', monospace;
-  
 }
 
 @layer base {

@@ -17,9 +17,7 @@ function RouteComponent() {
         <DocsNav />
         <main className="w-full max-w-prose shrink-0 py-16">
           <article className="prose mx-auto divide-y px-4">
-            <div>
-              <Outlet />
-            </div>
+            <Outlet />
           </article>
         </main>
         {params._splat ? <TocNav slug={params._splat} /> : null}
