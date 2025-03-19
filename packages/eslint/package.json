@@ -1,6 +1,25 @@
 {
   "name": "@marviuz/eslint-config",
   "version": "1.0.0",
+  "description": "Comprehensive ESLint configuration for JavaScript, TypeScript, React, and Next.js projects",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "react",
+    "typescript",
+    "nextjs",
+    "javascript",
+    "prettier",
+    "prettierrc",
+    "styleguide",
+    "styleguides"
+  ],
+  "homepage": "https://style-guide.marviuz.me",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marviuz/style-guide.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": "./index.js",

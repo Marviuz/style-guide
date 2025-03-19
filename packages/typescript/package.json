@@ -1,6 +1,16 @@
 {
   "name": "@marviuz/typescript",
   "version": "1.0.0",
+  "description": "Shared TypeScript configuration.",
+  "keywords": [
+    "typescript",
+    "tsconfig"
+  ],
+  "homepage": "https://style-guide.marviuz.me",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marviuz/style-guide.git"
+  },
   "license": "MIT",
   "exports": "./tsconfig.json",
   "publishConfig": {
