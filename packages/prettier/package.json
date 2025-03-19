@@ -20,14 +20,12 @@
     "lint": "eslint . --max-warnings=0"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "^2.5.10"
-  },
-  "devDependencies": {
     "@marviuz/eslint-config": "workspace:*",
     "@marviuz/typescript": "workspace:*",
     "eslint": "^9.22.0",
     "eslint-config-turbo": "^2.4.4",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "prettier-plugin-packagejson": "^2.5.10"
   },
   "peerDependencies": {
     "prettier": ">=3.0.0"

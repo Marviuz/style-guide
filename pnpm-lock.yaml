@@ -219,12 +219,21 @@ importers:
       '@eslint/js':
         specifier: ^9.22.0
         version: 9.22.0
+      '@marviuz/typescript':
+        specifier: workspace:*
+        version: link:../typescript
+      '@next/eslint-plugin-next':
+        specifier: ^15.2.3
+        version: 15.2.3
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.26.1
         version: 8.26.1(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       '@typescript-eslint/parser':
         specifier: ^8.26.1
         version: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
+      eslint:
+        specifier: ^9.22.0
+        version: 9.22.0(jiti@2.4.2)
       eslint-config-prettier:
         specifier: ^10.1.1
         version: 10.1.1(eslint@9.22.0(jiti@2.4.2))
@@ -258,29 +267,15 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.0.0
-      typescript-eslint:
-        specifier: ^8.26.1
-        version: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
-    devDependencies:
-      '@marviuz/typescript':
-        specifier: workspace:*
-        version: link:../typescript
-      '@next/eslint-plugin-next':
-        specifier: ^15.2.3
-        version: 15.2.3
-      eslint:
-        specifier: ^9.22.0
-        version: 9.22.0(jiti@2.4.2)
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
+      typescript-eslint:
+        specifier: ^8.26.1
+        version: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
 
   packages/prettier:
     dependencies:
-      prettier-plugin-packagejson:
-        specifier: ^2.5.10
-        version: 2.5.10(prettier@3.5.3)
-    devDependencies:
       '@marviuz/eslint-config':
         specifier: workspace:*
         version: link:../eslint
@@ -296,6 +291,9 @@ importers:
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
+      prettier-plugin-packagejson:
+        specifier: ^2.5.10
+        version: 2.5.10(prettier@3.5.3)
 
   packages/typescript: {}
 
