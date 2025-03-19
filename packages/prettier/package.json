@@ -1,6 +1,6 @@
 {
   "name": "@marviuz/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Streamlined Prettier setup with package.json formatting.",
   "keywords": [
     "prettier",
