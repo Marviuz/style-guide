@@ -1,5 +1,14 @@
 # @marviuz/prettier-config
 
+## 1.0.2
+
+### Patch Changes
+
+- [`f48bf34`](https://github.com/Marviuz/style-guide/commit/f48bf34015be1f0c5a2200d114d7e95d9317d91e) Thanks [@Marviuz](https://github.com/Marviuz)! - Move dev dependecies to prod deps as they're required for usage
+
+- Updated dependencies [[`f48bf34`](https://github.com/Marviuz/style-guide/commit/f48bf34015be1f0c5a2200d114d7e95d9317d91e)]:
+  - @marviuz/eslint-config@1.1.2
+
 ## 1.0.1
 
 ### Patch Changes
