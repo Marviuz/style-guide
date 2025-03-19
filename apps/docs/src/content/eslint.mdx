@@ -1,10 +1,12 @@
 ---
 title: ESLint
-summary: ESLint configuration
+summary: Comprehensive ESLint configuration for JavaScript, TypeScript, React, and Next.js projects
 group: Guide
 ---
 
 # @marviuz/eslint-config
+
+This package provides a comprehensive ESLint configuration designed for modern JavaScript and TypeScript projects, including React and Next.js applications.
 
 ## Installation
 
@@ -19,31 +21,32 @@ import marviuzConfig from '@marviuz/eslint-config';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  // Config I generally use
+  // Core recommended rules
   ...marviuzConfig.recommended,
 
-  // Configs for typescript
+  // TypeScript specific rules
   ...marviuzConfig.typescript,
 
-  // Configs for react
+  // React specific rules
   ...marviuzConfig.react,
 
-  // Configs for next.js
+  // Next.js specific rules
   ...marviuzConfig.next,
 ];
 ```
 
-_Note: this config uses [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) and you cannot redeclare a plugin._
+**Note**: This configuration relies on [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import). Avoid redeclaring this plugin in your project.
 
-## Usage with lint-staged
+## Integration with lint-staged
 
-I'm not sure why but a specific config needs to be manually added to be able to use with [lint-staged](https://github.com/lint-staged/lint-staged).
+The `languageOptions` object within the `eslint.config.mjs` is crucial for lint-staged to function correctly, enabling the `projectService` for proper TypeScript project awareness.
 
 ```js:lint-staged.config.mjs
 import path from 'node:path';
 
 /**
- * See next.js example for lint-staged
+ * Configures ESLint for lint-staged.
+ * Based on Next.js example:
  * https://nextjs.org/docs/app/api-reference/config/eslint#running-lint-on-staged-files
  */
 const lint = (filenames) =>

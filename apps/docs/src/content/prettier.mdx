@@ -1,12 +1,12 @@
 ---
 title: Prettier
-summary: Prettier configuration
+summary: Streamlined Prettier setup with package.json formatting.
 group: Guide
 ---
 
 # @marviuz/prettier-config
 
-This config comes with `prettier-plugin-packagejson` that allows you to format `package.json` files.
+This package provides a standardized Prettier configuration, including `prettier-plugin-packagejson` for formatting `package.json` files.
 
 ## Installation
 
@@ -20,12 +20,16 @@ npm i -D @marviuz/prettier-config
 import marviuzConfig from '@marviuz/prettier-config';
 
 export default marviuzConfig;
+
+// I haven't tried this yet, but this MIGHT work
+export { default } from '@marviuz/prettier-config';
+// or
+export * from '@marviuz/prettier-config'
 ```
 
 ## Extending the configuration
 
-In case you want to extend the config, you can destructure the config
-and add your own..
+If you need to customize the configuration, you can extend it by destructuring and adding your own options.
 
 ```js:prettier.config.mjs
 import marviuzConfig from '@marviuz/prettier-config';
