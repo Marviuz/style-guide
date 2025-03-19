@@ -14,7 +14,7 @@ type TocNavProps = {
 };
 
 export function TocNav({ slug }: TocNavProps) {
-  const selectedContent = allContents.find((content) => content.slug === slug);
+  const selectedContent = allContents.find((content) => content.path === slug);
 
   return (
     <Sidebar>

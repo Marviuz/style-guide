@@ -57,7 +57,11 @@ const content = defineCollection({
   name: 'content',
   directory: 'src/content',
   include: '**/*.mdx',
-  schema: (z) => ({ title: z.string(), summary: z.string() }),
+  schema: (z) => ({
+    title: z.string(),
+    summary: z.string(),
+    group: z.string(),
+  }),
   transform: async (doc, ctx) => {
     const slugger = new GithubSlugger();
     const mdx = await compileMDX(ctx, doc, {
@@ -98,6 +102,7 @@ const content = defineCollection({
     return {
       ...doc,
       slug: slugger.slug(doc.title),
+      path: doc._meta.path.replace(/\\/g, '/'),
       toc,
       mdx,
     };

@@ -16,7 +16,7 @@ export const Route = createFileRoute('/_docs/$')({
 
 function RouteComponent() {
   const params = useParams({ from: '/_docs/$' });
-  const content = allContents.find(({ slug }) => slug === params._splat);
+  const content = allContents.find(({ path }) => path === params._splat);
 
   return content ? (
     <MDXContent
