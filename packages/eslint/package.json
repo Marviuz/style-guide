@@ -1,6 +1,6 @@
 {
   "name": "@marviuz/eslint-config",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Comprehensive ESLint configuration for JavaScript, TypeScript, React, and Next.js projects",
   "keywords": [
     "eslint",
