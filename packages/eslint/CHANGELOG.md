@@ -1,5 +1,11 @@
 # @marviuz/eslint-config
 
+## 1.1.1
+
+### Patch Changes
+
+- [`f66ba32`](https://github.com/Marviuz/style-guide/commit/f66ba3229a76cc2b2587a5a3cbd56bcdc8d6e696) Thanks [@Marviuz](https://github.com/Marviuz)! - Move other packges from dev to prod dependencies
+
 ## 1.1.0
 
 ### Minor Changes
