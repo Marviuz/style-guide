@@ -66,6 +66,7 @@
     "typescript": "^5.8.2",
     "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "vite-plugin-sitemap": "^0.7.1"
   }
 }
