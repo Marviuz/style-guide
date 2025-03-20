@@ -1,5 +1,14 @@
 # @marviuz/prettier-config
 
+## 1.0.3
+
+### Patch Changes
+
+- [#5](https://github.com/Marviuz/style-guide/pull/5) [`bef9aad`](https://github.com/Marviuz/style-guide/commit/bef9aad985b629169745027803d2eb192be3573a) Thanks [@Marviuz](https://github.com/Marviuz)! - Modify exports to separate files instead of a single index due to nextjs requires the peer dep plugin even though it's not used
+
+- Updated dependencies [[`bef9aad`](https://github.com/Marviuz/style-guide/commit/bef9aad985b629169745027803d2eb192be3573a)]:
+  - @marviuz/eslint-config@2.0.0
+
 ## 1.0.2
 
 ### Patch Changes
