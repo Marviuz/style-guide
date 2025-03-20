@@ -17,21 +17,25 @@ npm i -D @marviuz/eslint-config
 ## Usage
 
 ```js:eslint.config.mjs
-import marviuzConfig from '@marviuz/eslint-config';
+import recommended from '@marviuz/eslint-config/recommended';
+import typescript from '@marviuz/eslint-config/typescript';
+import react from '@marviuz/eslint-config/react';
+import next from '@marviuz/eslint-config/next';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   // Core recommended rules
-  ...marviuzConfig.recommended,
+  ...recommended,
 
   // TypeScript specific rules
-  ...marviuzConfig.typescript,
+  ...typescript,
 
   // React specific rules
-  ...marviuzConfig.react,
+  ...react,
 
   // Next.js specific rules
-  ...marviuzConfig.next,
+  // Be sure to install @next/eslint-plugin-next
+  ...next,
 ];
 ```
 
@@ -60,14 +64,17 @@ export default {
 ```
 
 ```js:eslint.config.mjs
-import marviuzConfig from '@marviuz/eslint-config';
+import recommended from '@marviuz/eslint-config/recommended';
+import typescript from '@marviuz/eslint-config/typescript';
+import react from '@marviuz/eslint-config/react';
+import next from '@marviuz/eslint-config/next';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  ...marviuzConfig.recommended,
-  ...marviuzConfig.typescript,
-  ...marviuzConfig.react,
-  ...marviuzConfig.next,
+  ...recommended,
+  ...typescript,
+  ...react,
+  ...next,
 // [!code highlight:7]
   {
     languageOptions: {

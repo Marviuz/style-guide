@@ -1,5 +1,7 @@
 import reactRefresh from 'eslint-plugin-react-refresh';
-import marviuzConfig from '@marviuz/eslint-config';
+import recommended from '@marviuz/eslint-config/recommended';
+import typescript from '@marviuz/eslint-config/typescript';
+import react from '@marviuz/eslint-config/react';
 import pluginRouter from '@tanstack/eslint-plugin-router';
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -12,9 +14,9 @@ export default [
       '**/routeTree.gen.ts',
     ],
   },
-  ...marviuzConfig.recommended,
-  ...marviuzConfig.typescript,
-  ...marviuzConfig.react,
+  ...recommended,
+  ...typescript,
+  ...react,
   {
     plugins: {
       '@tanstack/router': pluginRouter,
