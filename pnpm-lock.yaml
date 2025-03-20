@@ -223,7 +223,7 @@ importers:
         specifier: workspace:*
         version: link:../typescript
       '@next/eslint-plugin-next':
-        specifier: ^15.2.3
+        specifier: '>=15 <16'
         version: 15.2.3
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.26.1

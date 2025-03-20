@@ -1,11 +1,11 @@
 import globals from 'globals';
 import turboConfig from 'eslint-config-turbo/flat';
-import marviuzConfig from './index.js';
+import recommended from './_base.js';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   ...turboConfig,
-  ...marviuzConfig.recommended,
+  ...recommended,
   {
     languageOptions: {
       globals: globals.node,

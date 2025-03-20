@@ -11,7 +11,7 @@ import commentsConfig from './comments.js';
 import importConfig from './import.js';
 
 /** @type {import('eslint').Linter.Config[]} */
-export const base = [
+export default [
   eslint.configs.recommended,
   prettier,
   commentsConfig,

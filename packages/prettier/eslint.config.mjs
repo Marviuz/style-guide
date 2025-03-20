@@ -1,9 +1,9 @@
 import turboConfig from 'eslint-config-turbo/flat';
-import marviuzConfig from '@marviuz/eslint-config';
+import recommended from '@marviuz/eslint-config/recommended';
 
 export default [
   ...turboConfig,
-  ...marviuzConfig.recommended,
+  ...recommended,
   {
     files: ['**/*.mjs', '**/*.cjs', '**/*.js'],
     rules: {
