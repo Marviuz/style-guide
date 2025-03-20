@@ -1,5 +1,11 @@
 # @marviuz/docs
 
+## 1.0.1
+
+### Patch Changes
+
+- [#5](https://github.com/Marviuz/style-guide/pull/5) [`bef9aad`](https://github.com/Marviuz/style-guide/commit/bef9aad985b629169745027803d2eb192be3573a) Thanks [@Marviuz](https://github.com/Marviuz)! - Modify exports to separate files instead of a single index due to nextjs requires the peer dep plugin even though it's not used
+
 ## 1.0.0
 
 ### Major Changes
