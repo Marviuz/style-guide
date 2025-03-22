@@ -18,6 +18,7 @@ export default {
   'react/jsx-no-target-blank': ['error', { allowReferrer: true }],
   'react/jsx-no-useless-fragment': ['warn', { allowExpressions: true }],
   'react/jsx-pascal-case': 'warn',
+  'react/jsx-sort-props': ['error', { callbacksLast: true }],
   'react/no-array-index-key': 'warn',
   'react/no-unstable-nested-components': 'error',
   'react/self-closing-comp': 'warn',

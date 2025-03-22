@@ -91,8 +91,8 @@ function TocList({
             </SidebarListItem>
             {childrenItems.length > 0 && (
               <TocList
-                toc={childrenItems}
                 baseDepth={childrenItems[0]?.depth}
+                toc={childrenItems}
               />
             )}
           </Fragment>
