@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "content-collections build && tsc -b && vite build",
-    "dev": "vite",
+    "build": "content-collections build && tsc -b && vinxi build --preset vercel-edge",
+    "dev": "vinxi dev",
     "lint": "eslint . --no-warn-ignored --max-warnings=0",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
@@ -66,7 +66,9 @@
     "typescript": "^5.8.2",
     "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
+    "vinxi": "^0.5.3",
     "vite": "^6.2.2",
-    "vite-plugin-sitemap": "^0.7.1"
+    "vite-plugin-sitemap": "^0.7.1",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
