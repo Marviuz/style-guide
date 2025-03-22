@@ -1,5 +1,11 @@
 # @marviuz/docs
 
+## 1.1.0
+
+### Minor Changes
+
+- [#7](https://github.com/Marviuz/style-guide/pull/7) [`aa7b100`](https://github.com/Marviuz/style-guide/commit/aa7b10045d2a6b5532a41758c465a592767a6c30) Thanks [@Marviuz](https://github.com/Marviuz)! - Use vinxi
+
 ## 1.0.1
 
 ### Patch Changes
