@@ -8,7 +8,8 @@ import pluginRouter from '@tanstack/eslint-plugin-router';
 export default [
   {
     ignores: [
-      'dist',
+      '.vercel',
+      '.vinxi',
       '**/*.config.mjs',
       '.content-collections',
       '**/routeTree.gen.ts',
