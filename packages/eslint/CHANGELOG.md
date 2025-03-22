@@ -1,5 +1,13 @@
 # @marviuz/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- [`8ac164b`](https://github.com/Marviuz/style-guide/commit/8ac164bdffd7e0315dac8c17c006f54720f09761) Thanks [@Marviuz](https://github.com/Marviuz)! - Update dependencies and hope that nothing breaks
+
+- [`db91071`](https://github.com/Marviuz/style-guide/commit/db910711135310093ae5502391820c94a92bda99) Thanks [@Marviuz](https://github.com/Marviuz)! - Prefer to sort jsx props with callbacks at last
+
 ## 2.0.0
 
 ### Major Changes
