@@ -1,5 +1,11 @@
 # @marviuz/docs
 
+## 1.3.0
+
+### Minor Changes
+
+- [#10](https://github.com/Marviuz/style-guide/pull/10) [`d3119fc`](https://github.com/Marviuz/style-guide/commit/d3119fca428e10505fc63d994b910b1bb9d45d94) Thanks [@Marviuz](https://github.com/Marviuz)! - Update packages and modify typescript config
+
 ## 1.2.0
 
 ### Minor Changes
