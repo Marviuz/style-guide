@@ -7,7 +7,8 @@ import typescript from './rules/typescript/index.js';
 import typescriptExtension from './rules/typescript/extension.js';
 import typescriptImport from './rules/typescript/import.js';
 
-export default tseslint.config(
+/** @type {import('eslint').Linter.Config[]} */
+export default [
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   importPlugin.flatConfigs.typescript,
@@ -15,8 +16,12 @@ export default tseslint.config(
   tsdoc,
   {
     languageOptions: {
+      sourceType: 'module',
+      ecmaVersion: consts.ECMA_VERSION,
+      parser: tseslint.parser,
       parserOptions: {
-        projectService: true,
+        project: true,
+        parser: tseslint.parser,
       },
     },
     files: consts.TYPESCRIPT_FILES,
@@ -31,4 +36,4 @@ export default tseslint.config(
       },
     },
   },
-);
+];

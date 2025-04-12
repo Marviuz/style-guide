@@ -22,8 +22,8 @@
   "dependencies": {
     "@marviuz/eslint-config": "workspace:*",
     "@marviuz/typescript": "workspace:*",
-    "eslint": "^9.23.0",
-    "eslint-config-turbo": "^2.4.4",
+    "eslint": "^9.24.0",
+    "eslint-config-turbo": "^2.5.0",
     "prettier": "^3.5.3",
     "prettier-plugin-packagejson": "^2.5.10"
   },

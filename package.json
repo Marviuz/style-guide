@@ -20,9 +20,9 @@
     "@commitlint/config-conventional": "^19.8.0",
     "@marviuz/prettier-config": "workspace:*",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
-    "turbo": "^2.4.4"
+    "turbo": "^2.5.0"
   },
-  "packageManager": "pnpm@10.6.5"
+  "packageManager": "pnpm@10.8.0"
 }
